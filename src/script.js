@@ -8,7 +8,7 @@ const textureLoader = new THREE.TextureLoader();
 const normalTexture = textureLoader.load("/texture/normal_map.png");
 
 // Debug
-const gui = new dat.GUI();
+// const gui = new dat.GUI();
 
 // Canvas
 const canvas = document.querySelector("canvas.webgl");
@@ -59,7 +59,7 @@ scene.add(pointLight2);
 // const light2 = gui.addFolder("Light 2");
 const pointLight3 = new THREE.PointLight(0xfff0000, 0.1);
 pointLight3.position.set(-6, -1.72, -3);
-pointLight3.intensity = 0.6;
+pointLight3.intensity = 6;
 pointLight3.color.set(0x0);
 scene.add(pointLight3);
 // light2.add(pointLight3.position, "x").min(-6).max(6).step(0.01);
@@ -135,7 +135,7 @@ let mouseX = 0;
 let mouseY = 0;
 let targetX = 0;
 let targetY = 0;
-const windowHalfX = window.innerHeight / 2;
+const windowHalfX = window.innerWidth / 2;
 const windowHalfY = window.innerHeight / 2;
 
 const onDocumentMove = (event) => {
